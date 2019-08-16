@@ -1,0 +1,27 @@
+<table>
+    <thead>
+        <th>COURSE ID</th>
+        <th>COURSE NAME</th>
+        <th>COURSE DESC</th>
+        <th>COURSE CHARGES</th>
+        <th> ACTION</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of courses">
+            <td>{{data.courseId}}</td>
+            <td>
+                <div *ngIf="!data.isEdit">{{data.courseName}}</div>
+                <input type="text" [(ngModel)]="data.courseName" *ngIf="data.isEdit" />
+            </td>
+            <td>
+                <div *ngIf="!data.isEdit">{{data.courseDesc}}</div>
+                <input type="text" [(ngModel)]="data.courseDesc" *ngIf="data.isEdit" />
+            </td>
+            <td>
+                <div *ngIf="!data.isEdit">{{data.courseCharges}}</div>
+                <input type="text" [(ngModel)]="data.courseCharges" *ngIf="data.isEdit" />
+            </td>
+            <td><button (click)="data.isEdit=!data.isEdit" *ngIf="!data.isEdit">Edit</button>
+                <button *ngIf="data.isEdit" (click)="onModify(data)">Save</button></td>
+        </tr>
+    </tbody>

@@ -1,0 +1,37 @@
+<!-- <p>get-course-by-id works!</p>
+
+     -->
+<div>
+    <form>
+        <h2>Get a particular Course Detail</h2>
+        <div class="form-group">
+            <label for="courseId">Course Id</label>
+            <input type="text" name="courseId" [(ngModel)]="id">
+
+        </div>
+        <div class="below"><button (click)="onSubmit(courses)">SUBMIT</button></div>
+        
+    </form>
+
+</div>
+<div>
+    <table>
+        <thead>
+            <th>COURSE ID</th>
+            <th>COURSE NAME</th>
+            <th>COURSE DESC</th>
+            <th>COURSE CHARGES</th>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- <tr *ngFor="let data of courses"> -->
+                <td>{{courses.courseId}}</td>
+                <td>{{courses.courseName}}</td>
+                <td>{{courses.courseDesc}}</td>
+                <td>{{courses.courseCharges}}</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+</div>

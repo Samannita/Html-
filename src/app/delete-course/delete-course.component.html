@@ -1,0 +1,36 @@
+
+
+
+<!-- <table>
+        <thead>
+            <th>COURSE ID</th>
+            <th>COURSE NAME</th>
+            <th>COURSE DESC</th>
+            <th>COURSE CHARGES</th>
+            <th> ACTION</th>
+        </thead>
+         <tbody>
+            <tr *ngFor="let data of courses">
+            <td>{{data.courseId}}</td>
+            <td>{{data.courseName}}</td>
+            <td>{{data.courseDesc}}</td>
+            <td>{{data.courseCharges}}</td>
+            <td><button (click)="deleteCourse(course)">DELETE </button> </td>
+        </tr>
+        </tbody>
+        
+        
+        </table> -->
+        <div>
+            <form>
+                <h2>Delete Course</h2>
+                <div class="form-group">
+                    <label for="courseId">Course Id</label>
+                    <input type="text" name="courseId" [(ngModel)]="id">
+                    
+                </div>
+                <div class="below"><button (click)="onSubmit()">Delete</button></div>
+            </form>
+            
+        </div>
+    

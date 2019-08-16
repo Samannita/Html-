@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main">
+  <div class="header" style="text-align:center">
+    <h1>
+       ! WELCOME TO {{ title }}!
+    </h1>
+  </div>
+  <ul>
+      <!-- <a href="#" data-toggle="tooltip" title="Hooray!"> -->
+    <li><a  href="#" data-toggle="tooltip" title="Add Course!" routerLink="/addCourse" routerLinkActive="active">Create</a></li>
+    <li><a  href="#" data-toggle="tooltip" title="Retrieve Course!" routerLink="/getAllCourse" routerLinkActive="active">Retrieve</a></li>
+    <li><a  href="#" data-toggle="tooltip" title="Edit & Save!" routerLink="/updateCourse" routerLinkActive="active">Update </a></li>
+    <li><a  href="#" data-toggle="tooltip" title="Remove Course" routerLink="/deleteCourse" routerLinkActive="active">Delete</a></li>
+    <li><a  href="#" data-toggle="tooltip" title="Give courseId!" routerLink="/retrieveById" routerLinkActive="active">Retrieve By id</a></li>
+  </ul>
+
+
+  <router-outlet></router-outlet>
+</div>
